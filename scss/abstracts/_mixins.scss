@@ -1,0 +1,9 @@
+%heading-style {
+  font-weight: 700;
+  font-family: Outfit, sans-serif;
+}
+
+@mixin heading-attr($size: null, $line-height: null) {
+  font-size: $size;
+  line-height: $line-height;
+}

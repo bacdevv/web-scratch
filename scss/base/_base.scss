@@ -1,0 +1,61 @@
+@use "../abstracts";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  // Primary color
+  --primary: #f59c5c;
+  --primary-light: #f7b687;
+
+  // Accent colors
+  --accent: #3b8256;
+  --accent-light: #659477;
+  --accent-dark: #23412f;
+
+  // Brown colors
+  --brown-1: #423d3c;
+  --brown-2: #383231;
+  --brown-3: #2d2726;
+  --brown-4: #292424;
+  --brown-5: #221e1e;
+
+  // Others
+  --white: #fff;
+  --gray: #cbc9c9;
+  --red: #7e3e3f;
+  --teal: #377e86;
+  --burnt-orange: #875c36;
+}
+
+html {
+  font: 62.5% Outfit, Fira Sans, sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+select,
+input,
+textarea,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2.section-heading {
+  @extend %heading-style;
+  @include abstracts.heading-attr(4.8rem);
+
+  color: var(--white);
+}
