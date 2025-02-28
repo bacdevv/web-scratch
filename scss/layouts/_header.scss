@@ -1,0 +1,35 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+	padding: 1.6rem 4.8rem 1.2rem;
+
+	background: var(--brown-3);
+
+	&__inner {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.nav {
+	&__list {
+		display: flex;
+		gap: 3.2rem;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		color: var(--gray);
+		font-family: "Fira Sans";
+		font-size: 1.5rem;
+		font-weight: 600;
+		line-height: 1.3;
+	}
+}

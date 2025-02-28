@@ -1,9 +1,30 @@
-%heading-style {
-  font-weight: 700;
-  font-family: Outfit, sans-serif;
+@use "sass:map";
+
+$grid-breakpoints: (
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+);
+
+%heading-styles {
+	font-weight: 700;
+	font-family: Outfit, sans-serif;
 }
 
-@mixin heading-attr($size: null, $line-height: null) {
-  font-size: $size;
-  line-height: $line-height;
+@mixin size-lheight($size: null, $line-height: null) {
+	font-size: $size;
+	line-height: $line-height;
+}
+
+@mixin screen($key) {
+	$breakpoint: map.get($grid-breakpoints, $key);
+	@if ($breakpoint) {
+		@media (min-width: $breakpoint) {
+			@content;
+		}
+	} @else {
+		@error 'The value "#{$key}" is not in breakpoints list.';
+	}
 }

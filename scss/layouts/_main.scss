@@ -1,0 +1,32 @@
+.hero {
+	position: relative;
+
+	&__img {
+		width: 100%;
+		position: absolute;
+		object-fit: cover;
+		pointer-events: none;
+		z-index: -1;
+        height: 100vh;
+        
+	}
+
+    &__wrap {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+	&__heading {
+		font-size: 8rem;
+	}
+
+    &__desc {
+        width: 72rem;
+        margin-top: 3.2rem;
+        font-size: 2rem;
+    }
+}
